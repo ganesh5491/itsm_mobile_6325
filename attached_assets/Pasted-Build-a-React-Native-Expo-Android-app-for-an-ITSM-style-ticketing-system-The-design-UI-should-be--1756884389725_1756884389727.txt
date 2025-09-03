@@ -1,0 +1,149 @@
+Build a React Native (Expo) Android app for an ITSM-style ticketing system.
+The design/UI should be similar to my existing GitHub project:
+👉 https://github.com/ganesh5491/itsm_mobile_6325
+
+Use this hosted reference web app for feature workflow:
+👉 https://itsm-yq9r.onrender.com
+
+1. Authentication (Login/Signup)
+
+Email/password authentication.
+
+Role-based login: Admin and Agent.
+
+Redirect user after login based on role.
+
+2. Ticket Management
+All Tickets & My Tickets
+
+Tab navigation:
+
+All Tickets → Admin can see all.
+
+My Tickets → Agent only sees assigned tickets.
+
+Ticket card should show:
+
+Title, Status, Priority, Assigned To, Created By, Date/Time.
+
+Ticket Details Page
+
+On clicking a ticket:
+
+Show:
+
+Title, Status, Priority, Assigned To, Created By, Date/Time.
+
+Description.
+
+Tags (e.g., "Software Issues", "Application Crashes").
+
+Attachments (download option).
+
+Comments section: Admin/Agent can add comments.
+
+Options (with permissions):
+
+Change Status → Open / In Progress / Closed.
+
+Change Priority → Low / Medium / High.
+
+3. Create Ticket Form (Updated UI)
+
+Keep UI design same as GitHub project.
+Fields:
+
+Ticket Title (Text).
+
+Category (Dropdown) → Example options:
+
+Software Issues
+
+Hardware Issues
+
+Network Issues
+
+Application Crashes
+
+Others
+
+Subcategory (Dropdown) → Example options:
+
+For "Software Issues": Installation, Update, Bug, License
+
+For "Hardware Issues": Laptop, Desktop, Printer, Peripheral
+
+For "Network Issues": Connectivity, VPN, Server, Firewall
+
+For "Application Crashes": Login, Performance, Data Loss, Compatibility
+
+Priority (Dropdown: Low / Medium / High).
+
+Support Type (Dropdown: Remote / Onsite / Telephone).
+
+Due Date (Date picker, optional).
+
+Contact Information:
+
+Contact Name (Text).
+
+Phone (Text).
+
+Department (Dropdown).
+
+Assign to Agent/Admin (Dropdown).
+
+Description (Multiline text).
+
+File Upload (Image/PDF/DOC up to 10MB).
+
+When submitted:
+
+Save ticket to backend.
+
+Add ticket to All Tickets.
+
+Add ticket to Assigned Agent’s Tickets.
+
+4. Backend API Integration
+
+Integrate with backend APIs to:
+
+Create / Fetch / Update tickets.
+
+Upload attachments.
+
+Add & fetch comments.
+
+Role-based visibility from backend.
+
+5. Role-based Ticket Visibility
+
+Admin: View all tickets, assign/re-assign, update status/priority.
+
+Agent: See only assigned tickets, update/comment.
+
+Technical Setup
+
+Framework: React Native (Expo).
+
+Navigation: React Navigation (Tabs + Stack).
+
+State Management: React Context API or Redux Toolkit.
+
+UI: Follow GitHub repo design (https://github.com/ganesh5491/itsm_mobile_6325
+).
+
+Reference workflow: https://itsm-yq9r.onrender.com
+
+⚡ Deliverables:
+
+Login/Signup (role-based).
+
+Ticket List (All & My Tickets).
+
+Ticket Details (with comments, attachments, status/priority updates).
+
+Create Ticket Form (with updated fields & dropdowns).
+
+API integration with role-based access.

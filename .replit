@@ -16,15 +16,15 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "ITSM Mobile Server"
+args = "ITSM Mobile App"
 
 [[workflows.workflow]]
-name = "ITSM Mobile Server"
+name = "ITSM Mobile App"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "node server.js"
+args = "npm start"
 waitForPort = 5000
 
 [workflows.workflow.metadata]
@@ -34,6 +34,10 @@ outputType = "webview"
 localPort = 5000
 externalPort = 80
 
+[[ports]]
+localPort = 19006
+externalPort = 3000
+
 [deployment]
 deploymentTarget = "autoscale"
-run = ["node", "server.js"]
+run = ["npm", "start"]
